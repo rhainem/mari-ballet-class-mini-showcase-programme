@@ -1,0 +1,607 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mari Ballet Class - Mini Showcase 2026 Programme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* type */
+        --serif: 'Playfair Display', 'Times New Roman', serif;
+        --serif-2: 'EB Garamond', 'Times New Roman', serif;
+
+        /* color */
+        --rose: oklch(40% 0.135 12);
+        --rose-mid: oklch(55% 0.13 12);
+        --rose-line: oklch(85% 0.045 12);
+        --violet: oklch(38% 0.1 278);
+        --violet-mid: oklch(52% 0.1 278);
+        --ivory: oklch(96% 0.012 60);
+        --tint: oklch(97% 0.012 15);
+        --ink: oklch(18% 0.012 20);
+
+        /* spacing */
+        --sp-1: 4px;
+        --sp-2: 9px;
+        --sp-3: 13px;
+        --sp-4: 18px;
+        --sp-6: 26px;
+        --sp-8: 35px;
+        --radius-lg: 28px;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--ivory);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: var(--rose);
+        text-decoration: underline;
+      }
+      a:hover {
+        color: var(--rose-mid);
+      }
+      .wrap {
+        max-width: 560px;
+        width: 100%;
+        margin: 0 auto;
+        background: var(--ivory);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .sec {
+        padding: var(--sp-8) var(--sp-4);
+        text-align: center;
+      }
+      .sec + .sec {
+        border-top: 1px solid var(--rose-line);
+      }
+      .sec-body {
+        text-align: left;
+        max-width: 460px;
+        margin: 0 auto;
+      }
+      .kicker {
+        font-family: var(--serif-2);
+        font-style: italic;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+        color: var(--rose);
+        font-weight: 500;
+        margin: 0 0 var(--sp-2) 0;
+      }
+      .kicker-alt {
+        color: var(--violet);
+      }
+      .rule-alt {
+        background: var(--violet);
+      }
+      .h {
+        font-family: var(--serif);
+        font-weight: 600;
+        color: var(--ink);
+        margin: 0 0 var(--sp-4) 0;
+      }
+      .rule {
+        width: 44px;
+        height: 1px;
+        background: var(--rose);
+        margin: var(--sp-3) auto var(--sp-4) auto;
+      }
+      .lede {
+        font-family: var(--serif-2);
+        font-size: 17px;
+        line-height: 1.75;
+        color: var(--ink);
+        margin: 0;
+      }
+
+      .piece {
+        background: var(--tint);
+        border-radius: var(--radius-lg);
+        padding: var(--sp-6);
+        margin-bottom: var(--sp-4);
+      }
+      .piece:last-child {
+        margin-bottom: 0;
+      }
+      .piece-num {
+        font-family: var(--serif-2);
+        font-style: italic;
+        font-size: 15px;
+        color: var(--violet-mid);
+        letter-spacing: 0.08em;
+        display: block;
+        margin-bottom: var(--sp-2);
+      }
+      .piece-title {
+        font-family: var(--serif);
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--ink);
+        margin: 0 0 var(--sp-3) 0;
+      }
+      .piece-meta {
+        font-family: var(--serif-2);
+        font-style: italic;
+        font-size: 15px;
+        color: var(--violet);
+        margin: 0 0 var(--sp-4) 0;
+      }
+      .piece-body {
+        font-family: var(--serif-2);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--ink);
+        margin: 0 0 var(--sp-4) 0;
+        text-align: left;
+      }
+      .dancers {
+        font-family: var(--serif-2);
+        font-size: 15px;
+        /* letter-spacing: 0.03em; */
+        color: var(--violet);
+        margin: 0;
+        /* text-transform: uppercase; */
+      }
+
+      .person-row {
+        padding: var(--sp-3) 0;
+        border-bottom: 1px solid var(--rose-line);
+      }
+      .person-row:last-child {
+        border-bottom: none;
+      }
+      .person-name {
+        font-family: var(--serif);
+        font-weight: 600;
+        font-size: 18px;
+        color: var(--ink);
+        display: block;
+      }
+      .person-role {
+        font-family: var(--serif-2);
+        font-style: italic;
+        font-size: 14px;
+        color: var(--rose);
+        display: block;
+        margin-top: 2px;
+      }
+
+      .divider-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--rose);
+        margin: var(--sp-6) auto;
+      }
+      .outline-btn {
+        display: inline-block;
+        font-family: var(--serif-2);
+        font-style: italic;
+        font-size: 16px;
+        color: var(--violet);
+        border: 1px solid var(--violet);
+        padding: 10px 28px;
+        border-radius: 999px;
+      }
+
+      .hero {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4/5;
+        background: var(--ink);
+        overflow: hidden;
+      }
+      .hero-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-scrim {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          oklch(15% 0.03 15 / 0.78) 0%,
+          oklch(15% 0.03 15 / 0.15) 55%,
+          oklch(15% 0.03 15 / 0.35) 100%
+        );
+        pointer-events: none;
+      }
+      .hero-logo-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: var(--sp-6) var(--sp-4) 0;
+        text-align: center;
+      }
+      .hero-logo {
+        width: 108px;
+        height: 108px;
+        margin: 0 auto;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 0 2px oklch(100% 0 0 / 0.5);
+        background: var(--tint);
+      }
+      .hero-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: var(--sp-8) var(--sp-4);
+        text-align: center;
+      }
+      .hero-kicker {
+        font-family: var(--serif-2);
+        font-style: italic;
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: oklch(92% 0.02 15);
+        margin: 0 0 6px 0;
+      }
+      .hero-title {
+        color: white;
+        font-size: clamp(38px, 10vw, 48px);
+        line-height: 1.1;
+        margin-bottom: 8px;
+      }
+      .hero-sub {
+        font-family: var(--serif-2);
+        font-size: 15px;
+        margin: 0;
+        color: oklch(94% 0.015 15 / 0.95);
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="hero">
+        <img
+          id="hero-photo"
+          class="hero-photo"
+          src="images/mari-ballet-class-studio-dancers.jpg"
+          alt="Mari Ballet Class Studio Dancers"
+        />
+        <div class="hero-scrim"></div>
+        <div class="hero-logo-wrap">
+          <!-- <img
+            id="logo"
+            class="hero-logo"
+            src="images/mari-ballet-class-logo.png"
+            alt="Mari Ballet Class Logo"
+          /> -->
+        </div>
+        <div class="hero-caption">
+          <p class="hero-kicker">2026 Programme</p>
+          <h1 class="h hero-title">MBC Mini Showcase</h1>
+          <p class="hero-sub" style="margin-top: var(--sp-3)">
+            Sunday, 20 September 2026 &nbsp;&middot;&nbsp; Wellesley Studios
+          </p>
+          <p class="hero-sub" style="margin-top: var(--sp-1)">
+            Show I: 4:00pm &nbsp;|&nbsp; Show II: 5:00pm
+          </p>
+        </div>
+      </div>
+      <div class="sec">
+        <p class="kicker">Introduction</p>
+        <h2 class="h" style="font-size: 28px">
+          Welcome to our 2026 MBC Mini Showcase!
+        </h2>
+        <div class="rule"></div>
+        <div class="sec-body" style="text-align: center">
+          <p class="lede">
+            Today, 36 dancers of different levels and experience come together
+            to share their love of ballet. For some, this will be their very
+            first performance.
+          </p>
+          <p class="lede" style="margin-top: var(--sp-3)">
+            This showcase is an opportunity for our dancers to share what they
+            have been working on in class and, most importantly, to enjoy the
+            experience of performing together.
+          </p>
+          <p class="lede" style="margin-top: var(--sp-3)">
+            This year marks the fourth year of my ballet school, and I’m very
+            proud of all the dancers who are performing today.
+          </p>
+          <p class="lede" style="margin-top: var(--sp-3)">
+            Thank you for being here and for supporting our dancers. We hope you
+            enjoy this short programme.
+          </p>
+        </div>
+        <p
+          style="
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 19px;
+            margin-top: var(--sp-4);
+            color: var(--rose);
+            margin-bottom: 2px;
+          "
+        >
+          Mari Yamazaki
+        </p>
+        <p
+          style="
+            font-family: var(--serif-2);
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin: 0;
+          "
+        >
+          Founder & Choreography
+        </p>
+      </div>
+
+      <div class="sec">
+        <p class="kicker kicker-alt">This Afternoon</p>
+        <h2 class="h" style="font-size: 28px">The Performances</h2>
+        <div class="rule rule-alt"></div>
+        <!-- <p
+          style="
+            font-family: var(--serif-2);
+            font-style: italic;
+            font-size: 15px;
+            color: var(--violet);
+            margin: 0 0 var(--sp-6) 0;
+          "
+        >
+          Choreography by Mari Yamazaki
+        </p> -->
+
+        <div class="sec-body">
+          <div class="piece">
+            <span class="piece-num">I.</span>
+            <p class="piece-title">Belle of the Ball</p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              Inspired by my childhood teacher’s choreography, this piece holds
+              a special place in my heart. I first saw it performed by older
+              dancers when I was eight, and my sister and I loved the opening
+              theme so much that we would watch the video at home and copy the
+              movements—long before I had even started ballet myself.
+            </p>
+            <p class="dancers">
+              Dancers — Emma, Linlin, Rosa, Sachiko, Sammi, Ying, Yumiko
+            </p>
+          </div>
+          <div class="piece">
+            <span class="piece-num">II.</span>
+            <p class="piece-title">Awakening of Flora variation</p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              This joyful variation is from the short ballet The Awakening of
+              Flora, in which Flora, the Roman goddess of flowers, awakens with
+              the arrival of spring. It celebrates the renewal of nature as the
+              world gently comes to life with beauty and love.
+            </p>
+            <p class="dancers">Dancers — Claire</p>
+          </div>
+          <div class="piece">
+            <span class="piece-num">III.</span>
+            <p class="piece-title">Kitri’s variation from Don Quixote</p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              This famous “Fan Variation” is performed during Kitri and
+              Basilio’s wedding celebrations in the ballet Don Quixote.
+              Independent, feisty and full of life, Kitri’s playful spirit
+              shines through.
+            </p>
+            <p class="dancers">Dancers — Kathy</p>
+          </div>
+          <div class="piece">
+            <span class="piece-num">IV.</span>
+            <p class="piece-title">Waltz of the Princesses from Swan Lake</p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              Taking place at the royal ball, where Prince Siegfried is expected
+              to choose a bride, princesses from different countries have been
+              invited to the palace as potential brides. There is a quiet sense
+              of hope and anticipation as they gather at court, their elegance
+              and noble presence reflecting the grandeur of the occasion.
+            </p>
+            <p class="dancers">Dancers —</p>
+            <p class="dancers">Marietta: Italian Princess</p>
+            <p class="dancers">Rosa: Russian Princess</p>
+            <p class="dancers">Elizabeth: Hungarian Princess</p>
+            <p class="dancers">Susan: Polish Princess</p>
+            <p class="dancers">Sue: Spanish Princess</p>
+            <p class="dancers">Trudy: German Princess</p>
+          </div>
+          <div class="piece">
+            <span class="piece-num">V.</span>
+            <p class="piece-title">Esmeralda’s variation</p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              From the ballet La Esmeralda, this variation tells the story of a
+              spirited young Romani woman whose beauty and independence capture
+              the attention of those around her. Fiercely courageous and
+              free-spirited, Esmeralda refuses to be confined by the
+              expectations placed upon her, embodying strength, passion and an
+              unwavering spirit.
+            </p>
+            <p class="dancers">Dancers — Jingyi</p>
+          </div>
+          <div class="piece">
+            <span class="piece-num">VI.</span>
+            <p class="piece-title">
+              Aurora’s birthday variation from Sleeping Beauty
+            </p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              This variation takes place during Princess Aurora’s 16th birthday
+              celebration, where guests from across the kingdom gather at the
+              palace. Surrounded by family, friends and four visiting princes,
+              Aurora enjoys the festivities, unaware that the arrival of an
+              unexpected guest will soon change the course of her story.
+            </p>
+            <p class="dancers">Dancers — Rina</p>
+          </div>
+          <div class="piece">
+            <span class="piece-num">VII.</span>
+            <p class="piece-title">La Fille mal gardée — Act I Highlight</p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              Set in the French countryside, the story follows Lise, a spirited
+              young woman, and Colas, a young farmer who are in love. Their
+              playful romance unfolds as they find every opportunity to be
+              together, surrounded by the lively celebrations and simple joys of
+              village life.
+            </p>
+            <p class="dancers">
+              Dancers — Alan, Anna, Cherry, Himeko, Kana, Nina, Sachiko, Yesom,
+              Yumiko, Yvonne
+            </p>
+          </div>
+          <div class="piece">
+            <span class="piece-num">VIII.</span>
+            <p class="piece-title">Tarantella from Bournonville’s Napoli</p>
+            <p class="piece-meta">
+              Duration [– min] &nbsp;&middot;&nbsp; Music: [TBD]
+            </p>
+            <p class="piece-body">
+              From August Bournonville’s Napoli, this lively Tarantella takes
+              place during joyful celebrations in Naples. Surrounded by friends
+              and fellow villagers, the couple, Teresina and Gennaro, celebrate
+              their love and the happiness of being together again.
+            </p>
+            <p class="dancers">
+              Dancers — Ana, Bianca, Candria, Daniela, Ella, Holly, Jingyi,
+              Lucy, Minh, Rhi Ann, Stephanie, Teresa, Zoe
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <p class="kicker">With Gratitude</p>
+        <h2 class="h" style="font-size: 26px">Special Thanks</h2>
+        <div class="rule"></div>
+        <div class="person-row">
+          <span class="person-name">Bianca Lau</span
+          ><span class="person-role">Costume coordination</span>
+        </div>
+        <div class="person-row">
+          <span class="person-name">Rina Shito</span
+          ><span class="person-role">Solo variation coaching support</span>
+        </div>
+        <div class="person-row">
+          <span class="person-name">Rhaine Diamond</span
+          ><span class="person-role">Programme design</span>
+        </div>
+        <div class="person-row">
+          <span class="person-name">Heidi Martin</span
+          ><span class="person-role">Performance photo</span>
+        </div>
+      </div>
+
+      <div class="sec">
+        <p class="kicker kicker-alt">Join Us</p>
+        <h2 class="h" style="font-size: 26px">Interested in our classes?</h2>
+        <div class="rule rule-alt"></div>
+        <p class="lede" style="text-align: center">
+          Enrollment for our summer term opens [date]. Classes for all ages and
+          levels — absolute beginners welcome.
+        </p>
+        <a
+          class="outline-btn"
+          style="margin-top: var(--sp-4); text-decoration: none"
+          href="https://mariballetclass.com/timetable-and-class-info/"
+          target="_blank"
+          >Enroll at mariballetclass.com</a
+        >
+      </div>
+
+      <div
+        class="sec"
+        style="padding-top: var(--sp-6); padding-bottom: var(--sp-8)"
+      >
+        <!-- <div class="divider-dot"></div> -->
+        <p
+          style="
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 20px;
+            color: var(--ink);
+            margin: 0;
+          "
+        >
+          Thank you for joining us.
+        </p>
+        <p
+          style="
+            font-family: var(--serif-2);
+            font-size: 14px;
+            color: var(--rose);
+            letter-spacing: 0.03em;
+          "
+        >
+          Mari Ballet Class
+        </p>
+        <p
+          style="
+            font-family: var(--serif-2);
+            font-size: 14px;
+            color: var(--rose);
+            margin-top: var(--sp-2);
+            letter-spacing: 0.03em;
+          "
+        >
+          <a
+            style="margin-top: var(--sp-4); text-decoration: none"
+            href="https://mariballetclass.com/timetable-and-class-info/"
+            target="_blank"
+            >mariballetclass.com</a
+          >
+          &middot;
+          <a
+            style="margin-top: var(--sp-4); text-decoration: none"
+            href="https://www.instagram.com/mariballetclass"
+            target="_blank"
+            >IG @mariballetclass</a
+          >
+          &middot;
+          <a
+            style="margin-top: var(--sp-4); text-decoration: none"
+            href="https://www.facebook.com/mariballetclass/"
+            target="_blank"
+            >F @mariballetclass</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
